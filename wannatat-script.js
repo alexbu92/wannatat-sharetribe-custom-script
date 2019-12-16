@@ -14,5 +14,5 @@ function AddView3DButton() {
     console.log($src);
     var $input = $('<a href="https://wannatat.firebaseapp.com/?image=' + $src + '" target="_blank">thesitewizard.com</a>');
     console.log($input);
-
+    $('.listing-description-content').appendChild($input);
 }
