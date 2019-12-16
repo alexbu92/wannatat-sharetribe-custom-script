@@ -12,7 +12,7 @@ function DisableImageBackground() {
 function AddView3DButton() {
     var $src = $('#listing-image-link img').attr('src');
     console.log($src);
-    var $input = $('<a href="https://wannatat.firebaseapp.com/?image=' + $src + '" target="_blank">thesitewizard.com</a>');
+    var $input = $('<a href="https://wannatat.firebaseapp.com/?image=' + $src + '" target="_blank">View on 3D model</a>');
     console.log($input);
     $('.listing-description-content').append($input);
 }
