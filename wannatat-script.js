@@ -2,6 +2,7 @@ window.onload = function () {  // make sure you run after the document has been 
 	$( document ).ready(function() {
             DisableImageBackground();
             AddView3DButton();
+            DisableQuantitySelector();
 	});
 }
 
@@ -17,6 +18,6 @@ function AddView3DButton() {
     $('.listing-description-content').append($input);
 }
 
-function DisabledQuantitySelector() {
+function DisableQuantitySelector() {
     $('#quantity').attr("disabled", true);
 }
