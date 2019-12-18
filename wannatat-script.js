@@ -16,3 +16,7 @@ function AddView3DButton() {
     console.log($input);
     $('.listing-description-content').append($input);
 }
+
+function DisabledQuantitySelector() {
+    $('#quantity').attr("disabled", true);
+}
