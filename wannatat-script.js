@@ -3,6 +3,7 @@ window.onload = function () {  // make sure you run after the document has been 
             DisableImageBackground();
             AddView3DButton();
             DisableQuantitySelector();
+            AddLandbot();
 	});
 }
 
@@ -29,4 +30,9 @@ function uuidv4() {
       var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
       return v.toString(16);
     });
+}
+
+function AddLandbot() {
+    $("<script src='https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js'></script>").appendTo(document.body);
+    $("<script> var myLandbot = new LandbotLivechat({index: 'https://landbot.io/u/H-335773-6DOHR4VX5MJ9639B/index.html',}); </script>").appendTo(document.body);
 }
