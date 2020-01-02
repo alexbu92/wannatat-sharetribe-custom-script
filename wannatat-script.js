@@ -19,8 +19,31 @@ function AddView3DButton() {
         console.log($src);
         var uuid = uuidv4();
         var $input = $('<a href="https://wannatat.firebaseapp.com/?image=' + $src + "?" + uuid + '" target="_blank">View on 3D model</a>');
-        console.log($input);
-        $('.listing-description-content').append($input);
+        $input.css(
+            {
+            "background-color": "#006254",
+            "box-shadow": "0 5px 0 lightgrey",
+            "color": "white",
+            "padding": "1em 1.5em",
+            "position": "relative",
+            "text-decoration": "none",
+            "text-transform": "uppercase",
+            "font-weight": "800"
+            }
+        );
+        	
+        var $inputwrapper = $('<div></div>');
+        $inputwrapper.wrapInner($input);
+        $inputwrapper.css(
+            {
+            	"width": "30%",
+            	"margin": "50px auto",
+            	"text-align": "center"
+            }
+        );
+       
+        //$('.listing-description-content').append($input);
+        $inputwrapper.insertAfter('.listing-image-carousel');
     }
 }
 
