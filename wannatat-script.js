@@ -8,21 +8,26 @@ window.onload = function () {  // make sure you run after the document has been 
 }
 
 function DisableImageBackground() {
-    $('#listing-image-link').css('background-color', 'white');
+    if ($('#listing-image-link').length) {
+        $('#listing-image-link').css('background-color', 'white');
+    }
 }
-
 function AddView3DButton() {
-    var $src = $('#listing-image-link img').attr('src');
-    $src = $src.replace(/\?(?:.(?!\?))+$/g, "");
-    console.log($src);
-    var uuid = uuidv4();
-    var $input = $('<a href="https://wannatat.firebaseapp.com/?image=' + $src + "?" + uuid + '" target="_blank">View on 3D model</a>');
-    console.log($input);
-    $('.listing-description-content').append($input);
+    if ($('#listing-image-link img').length) {
+        var $src = $('#listing-image-link img').attr('src');
+        $src = $src.replace(/\?(?:.(?!\?))+$/g, "");
+        console.log($src);
+        var uuid = uuidv4();
+        var $input = $('<a href="https://wannatat.firebaseapp.com/?image=' + $src + "?" + uuid + '" target="_blank">View on 3D model</a>');
+        console.log($input);
+        $('.listing-description-content').append($input);
+    }
 }
 
 function DisableQuantitySelector() {
-    $('#quantity').attr("disabled", true);
+    if ($('#quantity').length) {
+        $('#quantity').attr("disabled", true);
+    }
 }
 
 function uuidv4() {
