@@ -3,7 +3,7 @@ window.onload = function () {  // make sure you run after the document has been 
             DisableImageBackground();
             AddView3DButton();
             DisableQuantitySelector();
-            AddLandbot();
+            //AddLandbot();
 	});
 }
 
