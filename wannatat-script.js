@@ -36,7 +36,7 @@ function AddView3DButton() {
         $inputwrapper.wrapInner($input);
         $inputwrapper.css(
             {
-            	"width": "30%",
+            	"width": "70%",
             	"margin": "50px auto",
             	"text-align": "center"
             }
